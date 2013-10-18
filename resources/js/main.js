@@ -25100,9 +25100,9 @@ cljs_todo.todo.add_todo_BANG_ = function add_todo_BANG_() {
   var todo_value = dommy.core.value.call(null, todo_input);
   var todos_div = document.getElementById("todos-div");
   dommy.core.append_BANG_.call(null, todos_div, function() {
-    var dom7605 = document.createElement("p");
-    dom7605.appendChild(dommy.template.__GT_node_like.call(null, todo_value));
-    return dom7605
+    var dom7613 = document.createElement("p");
+    dom7613.appendChild(dommy.template.__GT_node_like.call(null, todo_value));
+    return dom7613
   }());
   return dommy.core.set_value_BANG_.call(null, todo_input, "")
 };
