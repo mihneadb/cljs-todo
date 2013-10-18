@@ -5,4 +5,9 @@
    [dommy.core :as dommy]))
 
 
-(dommy/append! (sel1 :#todos-div) (node [:p "Make cljs todo app"]))
+(defn add-todo!
+  []
+  (dommy/append! (sel1 :#todos-div) (node [:p "Make cljs todo app"])))
+
+
+(dommy/listen! (sel1 :#todo-add-btn) :click add-todo!)
