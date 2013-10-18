@@ -1,14 +1,7 @@
 # cljs-todo
 
-A Clojure library designed to ... well, that part is up to you.
+A simple "todo" demo app. You add some text and save it as todos. Nothing
+special!
 
-## Usage
+Demo at http://mihneadb.github.io/cljs-todo
 
-FIXME
-
-## License
-
-Copyright © 2013 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
