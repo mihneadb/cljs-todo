@@ -7,7 +7,17 @@
 
 (defn add-todo!
   []
-  (dommy/append! (sel1 :#todos-div) (node [:p "Make cljs todo app"])))
+  (let [todo-input (sel1 :#todo-input)
+        todo-value (dommy/value todo-input)
+        todos-div (sel1 :#todos-div)]
+    (dommy/append! todos-div (node [:p todo-value]))
+    (dommy/set-value! todo-input "")))
+
+(defn enter-add-todo!
+  [evt]
+  (when (= 13 (.-keyCode evt))
+    (add-todo!)))
 
 
 (dommy/listen! (sel1 :#todo-add-btn) :click add-todo!)
+(dommy/listen! (sel1 :#todo-input) :keyup enter-add-todo!)
